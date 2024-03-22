@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="34" Y="243"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="recu2023Arreglado.lps"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Parcial2019.lps"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="225" Column="16" TopLine="201"/>
+      </Position1>
+      <Position2>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="218" Column="81"/>
+      </Position2>
+      <Position3>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="150" Column="21" TopLine="141"/>
+      </Position3>
+      <Position4>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="237" Column="14" TopLine="227"/>
+      </Position4>
+      <Position5>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="240" Column="27" TopLine="227"/>
+      </Position5>
+      <Position6>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="237" Column="14" TopLine="227"/>
+      </Position6>
+      <Position7>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="240" Column="27" TopLine="227"/>
+      </Position7>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

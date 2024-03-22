@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="22" Y="17"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="4">
+      <Position>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <Caret Line="112" Column="18" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <Caret Line="13" Column="21" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <Caret Line="10" Column="16" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <Caret Line="118" Column="36" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="BorrarPrueba.lpr"/>
+        <Caret Line="30" Column="17" TopLine="30"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

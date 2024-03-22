@@ -1,0 +1,52 @@
+org 1000h
+
+Vocales db "AaEeIiOoUu"
+cadena db "HolaLean"
+fin db ?
+
+org 3000h
+
+
+RC:    push ax
+       push bx
+bucle: mov dl,[bx]
+       call es_vocal
+       cmp dl,00h
+       jnz sigo
+       inc dh
+ sigo: inc bx
+       dec ch
+       jnz bucle
+       pop ax
+       pop bx
+       ret
+
+
+es_vocal:push bx
+         push cx
+         mov bx,ax
+         cmp [bx],dl
+         jz vocal
+         inc bx
+         dec cl
+         jnz bucle2
+         mov dl,01h 
+         jmp fin
+vocal:   mov dl,00h
+fin:  pop cx
+      pop bx
+      ret 
+
+org 2000h
+
+mov bx,offset cadena
+mov ax, offset Vocales
+mov cl, offset cadena - offset Vocales
+mov ch, offset fin - offset cadena
+push dx
+mov dx,0
+call RC
+mov fin,dh
+pop dx
+hlt 
+end

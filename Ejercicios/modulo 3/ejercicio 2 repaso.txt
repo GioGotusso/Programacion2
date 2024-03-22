@@ -1,0 +1,48 @@
+org 1000h; asumo que son del mismo tamaño, preguntar en el parcial
+
+TablaA db 1, 2, 5, 4, 30
+
+TablaB db 1, 7, 5, 9, 7
+
+res db ?
+
+
+org 3000h
+
+
+rutina: push dx
+        push bx
+        mov dl,1; es res
+        add dl,dl
+        inc dh; es el valor de ax
+        cmp dh,[bx]
+        jnz rutina
+        mov [bx],dl
+        pop bx
+        pop dx
+ret
+   
+org 2000h
+
+  mov bx, offset TablaB
+  mov ax, offset TablaA
+  mov cl, offset TablaB - offset TablaA
+  mov ch,0
+bucle:  push bx
+        mov bx, ax
+        mov dh,[bx]
+        pop bx
+        cmp dh,[bx]
+        jns sigo
+        jz sigo
+        call rutina
+        cmp [bx],10
+        jns sigo
+        add ch,[bx]
+ sigo:  inc bx
+        inc ax
+        dec cl
+        jnz bucle
+        mov res, ch
+        hlt
+        end

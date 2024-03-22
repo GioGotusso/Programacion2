@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="actRepaso.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="52"/>
+        <CursorPos X="12" Y="52"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="arboles_Insertar.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="7" Y="24"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="F:\facu\progra2 I2\procesos_utiles.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="368"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="113" Column="20" TopLine="80"/>
+      </Position1>
+      <Position2>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="34" Column="15" TopLine="17"/>
+      </Position2>
+      <Position3>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="176" Column="34" TopLine="150"/>
+      </Position3>
+      <Position4>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="105" Column="9" TopLine="96"/>
+      </Position4>
+      <Position5>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="117" Column="18" TopLine="105"/>
+      </Position5>
+      <Position6>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="155" Column="12" TopLine="152"/>
+      </Position6>
+      <Position7>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="144" Column="60" TopLine="130"/>
+      </Position7>
+      <Position8>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="23" TopLine="13"/>
+      </Position8>
+      <Position9>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="29" Column="6" TopLine="11"/>
+      </Position9>
+      <Position10>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="86" TopLine="78"/>
+      </Position10>
+      <Position11>
+        <Filename Value="actRepaso.lpr"/>
+        <Caret Line="182" Column="39" TopLine="173"/>
+      </Position11>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

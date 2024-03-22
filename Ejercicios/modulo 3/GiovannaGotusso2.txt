@@ -1,0 +1,75 @@
+org 1000h
+
+tabla db "EsMInOmbrE"
+vocales db "AEIOU"
+fin db ?
+res db ?
+
+org 3000h
+
+es_vocal:push bx
+         push cx
+         mov bx,ax
+ bucle2: cmp [bx],dl
+         jz vocal
+         inc bx
+         dec cl; contador de vocales
+         jnz bucle2
+         mov dl,01h ; si no es vocal
+         jmp fin1
+vocal:   mov dl,00h
+fin1:  pop cx
+      pop bx
+      ret 
+
+ENCRYPT: push bx
+         push dx
+         mov bx,sp
+         add bx, 6
+         mov bx,[bx]
+         mov dl,[bx]; letra a analizar
+         cmp dl,41h; "A" , uso byte ptr para no usar mas registros
+         jnz sigo1
+         mov dh,40h; "@"
+         mov  [bx],dh
+   sigo1: cmp dl,45h
+         jnz sigo2
+         mov dh,33h; "3"
+         mov  [bx],dh
+  sigo2: cmp dl,49h; "I"
+         jnz sigo3
+         mov dh,21h; "!"
+         mov  [bx],dh
+  sigo3: cmp dl, 4Fh; "O"
+         jnz sigo4
+         mov dh,30h;"0"
+         mov  [bx],dh
+  sigo4: cmp dl,55h; "U"
+         jnz fin2
+         mov dh,75h; "u"
+         mov  [bx],dh
+  fin2:pop dx 
+       pop bx
+       ret
+
+org 2000h
+
+mov bx, offset tabla 
+mov ax, offset vocales
+mov cl,offset fin - offset vocales
+mov ch, offset vocales - offset tabla
+mov dx,0; pongo a dx en 0, por si hay basura en el registro
+bucle: mov dl,[bx]; tengo la letra a analizar
+       call es_vocal
+       cmp dl,00h; comparo si es vocal o no 
+       jnz sigo
+       push bx
+       call ENCRYPT
+       pop bx
+       inc dh; contador de caracteres que fueron modificados
+ sigo: inc bx
+       dec ch; contador de mi tabla
+       jnz bucle
+       mov res, dh; guardo en memoria la catidad de caracteres modificados
+hlt
+end

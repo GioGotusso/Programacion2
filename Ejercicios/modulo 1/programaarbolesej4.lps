@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="programaarbolesej4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="188"/>
+        <CursorPos X="25" Y="199"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="177" Column="25" TopLine="165"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="219" Column="11" TopLine="197"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="218" Column="3" TopLine="197"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="220" TopLine="197"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="187" Column="17" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="232" Column="16" TopLine="213"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="191" Column="55" TopLine="180"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="202" Column="11" TopLine="187"/>
+      </Position>
+      <Position>
+        <Filename Value="programaarbolesej4.pas"/>
+        <Caret Line="199" Column="29" TopLine="183"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

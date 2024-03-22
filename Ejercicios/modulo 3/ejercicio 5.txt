@@ -1,0 +1,36 @@
+org 1000h
+TABLA 	DB 	1,4,5,3,10,7,14,78,23,18
+VALOR	DB 	3
+
+org 3000h
+
+
+recorrer_tabla: push bx
+                push ax
+                mov bx,sp
+                mov ax,[bx]
+                add bx,2
+                mov bx,[bx];offset tabla
+         bucle: add [bx], al;le sumo valor a la pos de la tabla
+                inc bx
+                dec ah
+                jnz bucle 
+                pop ax
+                pop bx
+              ret       
+
+
+
+
+org 2000h
+
+mov bx,offset TABLA
+push bx
+mov al, VALOR
+mov ah, offset TABLA - offset VALOR 
+push ax
+call recorrer_tabla
+pop ax
+pop bx
+hlt 
+end

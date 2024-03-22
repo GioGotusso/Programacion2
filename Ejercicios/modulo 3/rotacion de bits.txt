@@ -1,0 +1,42 @@
+Ejercicio 1 y 2
+
+org 1000h
+
+num db 25
+cant db 7
+res db ?
+cant2 db 3; cantidad de veces que voy a rotar a la derecha
+org 3000h
+
+rotar_izq: push ax
+           pushf
+    bucle: add al, al
+           adc al,0
+           mov bx, cx
+           mov [bx],al
+           dec ah
+           jz fin
+           jmp rotar izq
+fin: popf
+     pop ax
+     ret
+
+rotar_derecha:  push dx
+                pushf
+                call rotar_izq
+                dec dl 
+                jz fin2
+                jmp rotar_derecha
+fin2: popf
+      pop dx
+      ret
+
+org 2000h
+
+mov al, num
+mov ah,cant
+mov cx, offset res
+mov dl, cant2
+call rotar_derecha
+hlt
+end

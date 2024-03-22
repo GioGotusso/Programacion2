@@ -1,0 +1,75 @@
+org 1000h
+
+tabla db "manugio"
+fin db ?
+vocales db "AaEeIiOoUu"
+res db ?
+
+org 3000h
+
+swap: push bx
+      push cx
+      push dx
+      mov ch,[bx]
+      push bx
+      mov bx, ax
+      mov cl,[bx] 
+      mov [bx],cl
+      pop bx
+      mov [bx],cl
+      pop dx
+      pop cx
+      pop bx
+      ret
+
+es_vocal: push ax
+          push bx
+          push dx
+          mov dx,bx      
+          mov bx,sp
+          add bx,8   
+          mov bx,[bx]
+          mov al,[bx]  
+          mov bx,dx
+          mov ch,10
+  bucle:  cmp [bx],al
+          jz vocal
+          inc bx    
+          dec ch
+          jnz bucle 
+          mov ch,01h
+          jmp fin
+  vocal: mov ch,00h
+ fin:   pop dx
+        pop bx
+        pop ax
+        ret
+
+org 2000h
+mov bx,offset tabla
+mov ax, offset fin - 1
+mov cl, offset fin - offset tabla
+mov dx,0
+push bx
+mov bx, offset vocales
+call es_vocal
+pop bx
+cmp ch,00h
+jnz sigo
+inc dh
+sigo: push ax
+      call es_vocal
+      pop ax
+      cmp ch,00h
+      jnz sigo2
+      inc dh
+sigo2: call swap
+       inc bx
+       dec ax
+       sub cl,2 
+       jz fin
+       cmp cl,1
+       jz es_vocal
+mov res,dh
+hlt
+end

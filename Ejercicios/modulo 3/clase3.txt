@@ -1,0 +1,17 @@
+
+org 1000h
+
+vocales db "AaEeIiOoUu"
+fin db ?
+cadena db "hOla--como--Estas"
+fin2 db ?
+
+
+org 3000h
+
+
+
+
+
+org 2000h
+

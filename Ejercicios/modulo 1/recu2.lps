@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="recu2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="72"/>
+        <CursorPos X="20" Y="84"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="150"/>
+        <CursorPos X="11" Y="158"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\gusta\Downloads\franciscogarciagrassiparcialreecho.pas"/>
+        <UnitName Value="franciscogarciagrassiParcialReecho"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="143"/>
+        <CursorPos X="11" Y="144"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="8">
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="127" Column="23" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\Users\gusta\Downloads\franciscogarciagrassiparcialreecho.pas"/>
+        <Caret TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="184" TopLine="167"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="129" Column="11" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="168" Column="11" TopLine="168"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="158" Column="11" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2023Arreglado.pas"/>
+        <Caret Line="168" Column="11" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2.lpr"/>
+        <Caret Line="162" Column="60" TopLine="151"/>
+      </Position>
+      <Position>
+        <Filename Value="recu2.lpr"/>
+        <Caret Line="76" Column="45" TopLine="68"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,50 @@
+org 1000h
+
+tabla dw 1,2,3,4,7,8
+fin dw ?
+res db 0
+org 3000h 
+
+
+es_impar: push ax
+   bucle: sub ax,2
+          jz es_par
+          jns bucle
+          mov ch,01h
+          jmp fin
+   es_par:mov ch,00h
+   fin:pop ax
+       ret
+
+recorre_tabla: pushf
+               push cx
+               push bx     
+               mov bx,sp
+               add bx,6
+               mov bx,[bx]
+               mov ax,[bx]
+       bucle1: call es_impar
+               cmp ch,01h
+               jnz parte
+               inc dx
+        parte: inc bx
+               dec cl
+               jnz bucle1
+
+pop bx
+pop cx
+popf
+ret             
+
+
+org 2000h
+
+mov bx, offset tabla; en  ax
+push bx
+mov cl, offset tabla - offset fin
+mov dx, 0
+call recorre_tabla
+pop bx
+mov res, dx
+hlt 
+end

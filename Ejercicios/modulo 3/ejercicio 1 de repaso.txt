@@ -1,0 +1,40 @@
+org 1000h
+
+tablaA db 1,20,5,4,30
+fin db ?
+res db ?
+
+org 3000h
+
+
+rutina: push ax
+        push bx
+        mov bx,sp
+ bucle: add al,[bx]
+        inc ah
+        cmp ah,[bx]
+        jnz bucle
+        mov [bx],al
+        pop bx
+        pop ax
+        ret
+
+org 2000h
+mov bx, offset tabla
+mov ax,0
+mov cl, offset fin - offset tabla
+bucle: cmp [bx],20
+       jns sigo
+       jz sigo
+       push bx
+       push ax
+       call rutina
+       pop ax
+       pop bx
+       inc dl; contador valores que modifique
+ sigo: inc bx
+       dec cl
+       jnz bulce
+       mov res,dl
+hlt 
+end

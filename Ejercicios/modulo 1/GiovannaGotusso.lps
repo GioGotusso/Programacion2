@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="55"/>
+        <CursorPos X="9" Y="60"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ActividadREpasoIMPORTANTE.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="381"/>
+        <CursorPos X="57" Y="352"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="arboles_Insertar.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="26"/>
+        <CursorPos X="6" Y="37"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="procesos_utiles.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="113"/>
+        <CursorPos X="34" Y="129"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="abb_ordenado.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="113"/>
+        <CursorPos X="5" Y="124"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="64" TopLine="165"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="176" Column="32" TopLine="168"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="130" Column="8" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="81" Column="11" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="42" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="81" Column="11" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="31" Column="12" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="127" Column="32" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="63" TopLine="165"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="30" Column="14" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="129" Column="72" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="73" Column="23" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="127" Column="29" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="63" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="189" Column="29" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="63" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="189" Column="23" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="191" Column="41" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="193" Column="4" TopLine="176"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="42" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="105" Column="112" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="29" Column="16" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="177" Column="101" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="173" Column="53" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="189" Column="13" TopLine="173"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="144" Column="3" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="135" Column="11" TopLine="126"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="170" Column="53" TopLine="161"/>
+      </Position>
+      <Position>
+        <Filename Value="GiovannaGotusso.lpr"/>
+        <Caret Line="65" Column="9" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="abb_ordenado.pas"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

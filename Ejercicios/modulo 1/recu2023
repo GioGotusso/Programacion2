@@ -1,0 +1,250 @@
+program recu2023;
+
+type
+
+ fecha=record
+   dia:integer;
+   mes:integer;
+   anio:integer;
+ end;
+
+materia=record
+   codigo:integer;
+   nombre:string;
+   nota:real;
+   Fecha:fecha;
+ end;
+
+ alumnos=record
+   nombre:string;
+   apellido:string;
+   legajo:string;
+   carrera:string;
+   Materia:materia;
+ end;
+
+Alu=record
+  nombre:string;
+  apellido:string;
+  legajo:string;
+  carrera:string;
+  Fecha:fecha;
+  nota:integer;
+end;
+ 
+ listaA=^nodoL;
+ nodoL=record
+   dato:Alumnos;
+   sig:listaA;
+ end;
+ 
+ materia0=record
+    nombre:string;
+    codigo:integer;
+ end;
+ 
+ arbol=^nodoA;
+ nodoA=record
+    dato:materia0;
+    alu:listaA;
+    cantA:integer;
+    HD:arbol;
+    HI:arbol;
+ end;
+ 
+procedure leerDatos(a: alumnos);
+begin
+    writeln('legajo ');
+    readln(a.legajo);
+    if(a.legajo<>'0000/0') then begin
+       writeln('nombre');
+       readln(a.nombre);
+       writeln('apellido');
+       readln(a.apellido);
+       writeln('carrera');
+       readln(a.carrera);
+   end;
+end;
+
+procedure leerDatos(m:materia);
+begin
+    writeln('nombre');
+    readln(m.codigo);
+    writeln('codigo');
+    readln(m.codigo);
+    writeln('nota');
+    readln(m.nota);
+    writeln('dia');
+    readln(m.Fecha.dia);
+    writeln('mes');
+    readln(m.Fecha.mes);
+    writeln('anio');
+    readln(m.Fecha.anio);
+ end;
+  
+procedure cargarDatos(var DatosArbol: materia0; DatosACargar: materia0);
+begin
+  with DatosACargar do begin
+    DatosArbol.nombre:=nombre;
+    DatosArbol.codigo:=codigo;
+  end;
+end;  
+    
+ 
+procedure cargarDatosF(var DatosArbol: fecha; DatosACargar: fecha);
+begin
+  with DatosACargar do begin
+    DatosArbol.anio:=anio;
+    DatosArbol.dia:=dia;
+    DatosArbol.mes:=mes;
+  end;
+end;
+   
+    
+    
+procedure cargarDatosM(var DatosArbol: Alu; DatosACargar:Alu);
+begin
+  with DatosACargar do begin
+    DatosArbol.nombre:=nombre;
+    DatosArbol.apellido:=apellido;
+    DatosArbol.legajo:=legajo;
+    DatosArbol.carrera:=carrera;
+    DatosArbol.nota:=nota;
+    cargarDatosF(DatosArbol.Fecha,DatosACargar.Fecha);
+  end;
+end;
+
+Procedure AgregarAdelante (var l: listaA; DatoACargar: Alu);
+  Var nuevo: listaA;
+    Begin
+      New(nuevo);
+      nuevo^.sig:=l;
+      cargarDatosM(nuevo^.dato,DatoACargar);
+      l:=nuevo;
+    End;
+
+procedure cargarArbol(var a: arbol; d: materia0; m: Alu);
+  begin
+    if (a = nil) then begin
+      {Cargar El Primer Dato}
+      new(a);
+      a^.hd:=nil;
+      a^.hi:=nil;
+      {Parte Modificable}
+      cargarDatos(a^.dato,d);
+      a^.alu:=nil;
+      agregarAdelante(a^.alu,m);
+      a^.cantA:=a^.cantA+1;
+    end
+    else begin
+      if (d.codigo < a^.dato.codigo) then
+        cargarArbol(a^.hi,d,m)
+      else begin
+        if (d.codigo > a^.dato.codigo) then
+          cargarArbol(a^.hd,d,m)
+        else begin
+          {que Hacer Con Datos Repetidos}
+          AgregarAdelante(a^.alu,m);
+          a^.cantA:=a^.cantA+1;
+        end;
+      end;
+    end;
+  end;
+
+{modulo b}
+procedure informar(a:arbol;l:listaA;var total:integer);
+var
+   porcentaje:real;
+   cant:integer;
+
+begin
+   porcentaje:=0;
+   cant:=0;
+   if(a<>nil) then begin
+     while(l<>nil) do begin
+       if(l^.dato.carrera='LS') then begin
+          if(l^.dato.nota>7) then
+             cant:=cant+1
+          else
+           total:=total+1;
+       l:=l^.sig;
+     if(total<>0) then
+        porcentaje:=(cant/total)*100;
+        writeln(a^.dato.nombre);
+     informar(a^.HI,l,total);
+     informar(a^.HD,l,total);
+   end;
+end;
+end;
+end;
+
+{modulo c}
+
+procedure recorrerLista(l:listaA;var total:integer);
+begin
+
+while(l<>nil) do begin
+   if(l^.dato.Fecha.mes>=04)and(l^.dato.Fecha.mes<=06)then 
+         total:=total+1;
+   l:=l^.sig;  
+ end;
+end;
+
+procedure busquedaAcotada(a: arbol; inf,sup:integer;l:listaA;var total:integer);
+begin
+  if (a <> nil) then begin
+    if (a^.dato.codigo  >= inf) then begin
+      if (a^.dato.codigo<= sup) then begin
+        busquedaAcotada(a^.hd,inf,sup,l,total);
+        recorrerLista(l,total);      
+        busquedaAcotada(a^.hi,inf,sup,l,total);
+      end
+      else
+        busquedaAcotada(a^.hd,inf,sup,l,total);
+    end
+    else
+      busquedaAcotada(a^.hd,inf,sup,l,total);
+  end;
+end;
+
+{modulo d}
+procedure buscarMaxDeUnDato (a: arbol; var cantMax: integer; var codMax: integer);
+begin
+  {Es Un PostOrden}
+  if (a <> nil) then begin
+    buscarMaxDeUnDato(a^.hi,cantMax,codMAX);
+    buscarMaxDeUnDato(a^.hd,cantMax,codMax);
+    if (a^.cantA>cantMax) then begin
+      codMax:=a^.dato.codigo;
+      cantMax:= a^.cantA;
+    end;
+  end;
+end;
+
+var a: arbol;
+    mat: materia;
+    d:materia0;
+    max: integer;
+    m:Alu;
+    codMax:integer;
+    total:integer;
+    l:listaA;
+    al:alumnos;
+    f:fecha;
+begin
+  max:=-1;
+  total:=0;
+  a:=nil;
+  leerDatos(al);
+  while (al.legajo <> '0000/0') do begin
+    leerDatosM(mat);
+    cargarArbol(a,d,m);
+    leerDatos(al);
+  end;
+  informar(a,l,total);
+  buscarMaxDeUnDato(a,max,codMax);
+  writeln('el  codigo de la materia con mayor cantidad de aprobados es: ',codMax);
+  busquedaAcotada(a,25,33,l,total);
+  writeln('el total de aprobados de los codigos entre 25 y 33 son: ',total)
+end.
+

@@ -1,0 +1,39 @@
+
+org 1000h
+
+tabla db "e4stE&3s.el.r3çup3R@t0r1o!"
+res db ?
+org 3000h
+
+
+mayus: push ax
+       mov bx, sp
+       add bx, 4
+       mov bx, [bx]
+       mov al,[bx];1ra letra a comparar
+       cmp al, 61h
+       js fin; determino si es una letra o no
+       cmp al,7Bh; "z" + 1, para contar los valores estrictamente menores a "z"
+       jns fin
+       sub byte ptr [bx],32; diferencia entre una minuscula y su mayuscula
+fin:pop ax     
+    ret
+
+org 2000h
+
+mov bx, offset tabla
+mov ax, 0
+mov al,45h
+mov ch, offset res - offset tabla;contador tabla
+push bx
+bucle: call mayus
+       pop bx
+       cmp [bx],al
+       jnz sigo
+       inc ah; contador de letras e
+ sigo: inc bx
+       dec ch
+       jnz bucle
+       mov res, ah
+hlt 
+end
